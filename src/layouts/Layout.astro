@@ -48,7 +48,7 @@ const fullTitle = `${title} | AppRefull`;
     <link rel="canonical" href={canonical} />
     
     <!-- Favicon -->
-    <link rel="icon" type="image/png" href="/images/logodblanco.png" />
+    <link rel="icon" type="image/png" href="/Refull-App/images/logodblanco.png" />
     <link rel="apple-touch-icon" sizes="180x180" href="/images/logod.png" />
     
     <!-- Preload critical resources -->
@@ -140,7 +140,13 @@ const fullTitle = `${title} | AppRefull`;
     outline-offset: 2px;
   }
   
-  /* Scrollbar personalizada */
+  /* Scrollbar personalizada - usando sintaxis moderna */
+  * {
+    scrollbar-width: thin;
+    scrollbar-color: #cbd5e1 #f1f5f9;
+  }
+  
+  /* Webkit scrollbar para compatibilidad con navegadores webkit */
   ::-webkit-scrollbar {
     width: 8px;
   }

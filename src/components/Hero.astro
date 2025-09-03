@@ -24,7 +24,7 @@ import OptimizedImage from './ui/OptimizedImage.astro';
       />
     </div>
     <div class="flex flex-col items-start">
-      <h1 class="text-3xl md:text-6xl font-bold mb-8 text-white">
+      <h1 class="hero-title text-3xl md:text-6xl font-bold mb-8 text-white">
         Tu conductor al instante
       </h1>
       <a 
@@ -69,5 +69,18 @@ import OptimizedImage from './ui/OptimizedImage.astro';
   
   .hero-section img {
     contain: layout style paint;
+  }
+  
+  /* Fix h1 font-size warning - specify explicit font sizes */
+  .hero-title {
+    font-size: 1.875rem; /* text-3xl = 30px */
+    line-height: 2.25rem; /* leading-9 */
+  }
+  
+  @media (min-width: 768px) {
+    .hero-title {
+      font-size: 3.75rem; /* text-6xl = 60px */
+      line-height: 1;
+    }
   }
 </style>
