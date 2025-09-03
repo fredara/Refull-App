@@ -1,0 +1,42 @@
+---
+import Isotipo from './ui/Isotipo.astro';
+// Footer component
+---
+
+<footer id="contacto" class="bg-gray-50 text-custom-blue py-12 px-8 lg:px-0">
+  <div class="container-custom">
+    <div class="grid md:grid-cols-3 gap-8">
+      <div>
+        <div class="flex items-center gap-3 mb-4">
+          <Isotipo size="md" />
+          <h3 class="text-xl font-bold">AppRefull</h3>
+        </div>
+        <p class="text-custom-blue">
+          Tu conductor al instante
+        </p>
+      </div>
+      
+      <div>
+        <h4 class="text-lg font-semibold mb-4">Enlaces</h4>
+        <ul class="space-y-2">
+          <li><a href="#caracteristicas" class="text-custom-blue hover:text-white">Características</a></li>
+          <li><a href="#contacto" class="text-custom-blue hover:text-white">Contacto</a></li>
+          <li><a href="#" class="text-custom-blue hover:text-white">Política de privacidad y seguridad</a></li>
+          <li><a href="#" class="text-custom-blue hover:text-white">Términos y condiciones</a></li>
+        </ul>
+      </div>
+      
+      <div>
+        <h4 class="text-lg font-semibold mb-4">Contacto</h4>
+        <p class="text-custom-blue">
+          <a href="mailto:info@apprefull.com" class="text-custom-blue hover:text-gray-500">info@apprefull.com</a><br>
+          +1 234 567 890
+        </p>
+      </div>
+    </div>
+    
+    <div class="border-t border-gray-800 mt-8 pt-8 text-center text-custom-blue">
+      <p>&copy; 2025 AppRefull. Todos los derechos reservados.</p>
+    </div>
+  </div>
+</footer>

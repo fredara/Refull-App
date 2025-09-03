@@ -1,0 +1,56 @@
+---
+import Isotipo from './ui/Isotipo.astro';
+// Datos de las características
+const features = [
+    {
+        icon: "🚀",
+        title: "Rápido",
+        description: "Nuestros conductores están listos para ofrecer un servicio rápido y confiable.",
+        bgColor: "bg-blue-100"
+    },
+    {
+        icon: "💰",
+        title: "Ahorra Tiempo y Dinero",
+        description: "Con nosotros, puedes hacer tus necesidades diarias más rápido y económico.",
+        bgColor: "bg-green-100"
+    },
+    {
+        icon: "🛡️",
+        title: "Seguridad Garantizada",
+        description: "Tu seguridad es nuestra prioridad. Contamos con un sistema de seguridad avanzado para garantizar tu tranquilidad.",
+        bgColor: "bg-purple-100"
+    },
+    {
+        icon: "isotipo",
+        title: "Variedad de Vehículos",
+        description: "Contamos con una variedad de vehículos para que elijas el que más te guste.",
+        bgColor: "bg-orange-100"
+    }
+];
+---
+
+<div class="flex flex-col items-start justify-start -mt-10 w-full">
+    <div class="py-10 lg:py-16 bg-gray-50 rounded-t-3xl w-full relative z-20 px-8 lg:px-0">
+        <img src="/images/imgphone.png" alt="DikuPhone" class="hidden lg:block absolute lg:-top-56 right-16 w-4/12 h-auto">
+        <div class="container-custom">
+            <h2 class="text-3xl md:text-4xl font-bold text-center lg:text-left mb-8 lg:mb-16 text-custom-blue">
+                Un servicio de confianza
+            </h2>
+            <div class="grid md:grid-cols-1 lg:grid-cols-2 gap-4 lg:gap-8 w-full lg:w-2/3">
+                {features.map((feature) => (
+                    <div class="bg-white p-6 rounded-xl shadow-md">
+                        <div class={`w-12 h-12 ${feature.bgColor} rounded-lg flex items-center justify-center mb-4`}>
+                            {feature.icon === "isotipo" ? (
+                                <Isotipo size="sm" className="w-8 h-8" />
+                            ) : (
+                                <span class="text-2xl">{feature.icon}</span>
+                            )}
+                        </div>
+                        <h3 class="text-xl font-semibold mb-2 text-custom-blue">{feature.title}</h3>
+                        <p class="text-custom-blue">{feature.description}</p>
+                    </div>
+                ))}
+            </div>
+        </div>
+    </div>
+</div>

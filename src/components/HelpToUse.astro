@@ -1,0 +1,96 @@
+---
+// Componente cintillo informativo para invitar a descargar la app
+---
+
+<div class="help-to-use-section py-12 bg-gradient-to-r from-custom-blue to-custom-orange w-full">
+  <div class="container-custom px-8 lg:px-0">
+    <div class="flex flex-col md:flex-row items-center justify-between gap-6">
+      <!-- Contenido principal -->
+      <div class="text-center md:text-left">
+        <h2 class="text-2xl md:text-3xl font-bold text-white mb-2">
+          ¿Quieres saber cómo se usa?
+        </h2>
+        <p class="text-white/90 text-lg">
+          Descubre todos los tips y trucos para aprovechar al máximo DikuRefull
+        </p>
+      </div>
+      
+      <!-- Botones de acción -->
+      <div class="flex flex-col sm:flex-row gap-4">
+        <!-- Botón para Instagram -->
+        <a 
+          href="https://instagram.com/dikurefull" 
+          target="_blank" 
+          rel="noopener noreferrer"
+          class="bg-white text-custom-blue px-6 py-3 rounded-lg font-semibold hover:bg-gray-100 transition-colors duration-200 flex items-center justify-center gap-2 shadow-lg hover:shadow-xl"
+        >
+          <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24">
+            <path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/>
+          </svg>
+          Ver en Instagram
+        </a>
+        
+        <!-- Botón para descargar app -->
+        <a 
+          href="https://play.google.com/store" 
+          target="_blank" 
+          rel="noopener noreferrer"
+          class="bg-custom-orange text-white px-6 py-3 rounded-lg font-semibold hover:bg-orange-600 transition-colors duration-200 flex items-center justify-center gap-2 shadow-lg hover:shadow-xl"
+        >
+          <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24">
+            <path d="M3,20.5V3.5C3,2.91 3.34,2.39 3.84,2.15L13.69,12L3.84,21.85C3.34,21.6 3,21.09 3,20.5M16.81,15.12L6.05,21.34L14.54,12.85L16.81,15.12M20.16,10.81C20.5,11.08 20.75,11.5 20.75,12C20.75,12.5 20.53,12.9 20.18,13.18L17.89,14.5L15.39,12L17.89,9.5L20.16,10.81M6.05,2.66L16.81,8.88L14.54,11.15L6.05,2.66Z"/>
+          </svg>
+          Descargar App
+        </a>
+      </div>
+    </div>
+  </div>
+</div>
+
+<style>
+  .help-to-use-section {
+    position: relative;
+    overflow: hidden;
+  }
+  
+  .help-to-use-section::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: linear-gradient(135deg, rgba(0, 77, 77, 0.9) 0%, rgba(255, 69, 0, 0.9) 100%);
+    z-index: 1;
+  }
+  
+  .help-to-use-section > * {
+    position: relative;
+    z-index: 2;
+  }
+  
+  /* Animación sutil para los botones */
+  .help-to-use-section a {
+    transform: translateY(0);
+    transition: all 0.3s ease;
+  }
+  
+  .help-to-use-section a:hover {
+    transform: translateY(-2px);
+  }
+  
+  /* Responsive adjustments */
+  @media (max-width: 768px) {
+    .help-to-use-section {
+      padding: 2rem 0;
+    }
+    
+    .help-to-use-section h2 {
+      font-size: 1.5rem;
+    }
+    
+    .help-to-use-section p {
+      font-size: 1rem;
+    }
+  }
+</style>
