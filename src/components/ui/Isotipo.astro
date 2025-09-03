@@ -1,4 +1,6 @@
 ---
+import OptimizedImage from './OptimizedImage.astro';
+
 export interface Props {
   size?: 'sm' | 'md' | 'lg' | 'xl';
   className?: string;
@@ -12,10 +14,20 @@ const sizeClasses = {
   lg: 'w-16 h-16',
   xl: 'w-24 h-24'
 };
+
+const sizeMap = {
+  sm: 32,
+  md: 48,
+  lg: 64,
+  xl: 96
+};
 ---
 
-<img 
+<OptimizedImage 
   src="/Refull-App/images/logod.png" 
   alt="DIKU Isotipo" 
-  class={`${sizeClasses[size]} ${className}`}
+  className={`${sizeClasses[size]} ${className}`}
+  width={sizeMap[size]}
+  height={sizeMap[size]}
+  loading="lazy"
 />

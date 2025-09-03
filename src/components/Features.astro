@@ -1,5 +1,6 @@
 ---
 import Isotipo from './ui/Isotipo.astro';
+import OptimizedImage from './ui/OptimizedImage.astro';
 // Datos de las características
 const features = [
     {
@@ -31,7 +32,13 @@ const features = [
 
 <div class="flex flex-col items-start justify-start -mt-10 w-full">
     <div class="py-10 lg:py-16 bg-gray-50 rounded-t-3xl w-full relative z-20 px-8 lg:px-0">
-        <img src="/Refull-App/images/imgphone.png" alt="DikuPhone" class="hidden lg:block absolute lg:-top-56 right-16 w-4/12 h-auto">
+        <OptimizedImage 
+          src="/Refull-App/images/imgphone.png" 
+          alt="DikuPhone" 
+          className="hidden lg:block absolute lg:-top-56 right-16 w-4/12 h-auto"
+          loading="lazy"
+          sizes="(max-width: 1024px) 0px, 25vw"
+        />
         <div class="container-custom">
             <h2 class="text-3xl md:text-4xl font-bold text-center lg:text-left mb-8 lg:mb-16 text-custom-blue">
                 Un servicio de confianza

@@ -55,8 +55,46 @@ const fullTitle = `${title} | AppRefull`;
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     
-    <!-- Google Fonts (opcional) -->
+    <!-- DNS prefetch for external resources -->
+    <link rel="dns-prefetch" href="//fonts.googleapis.com" />
+    <link rel="dns-prefetch" href="//fonts.gstatic.com" />
+    
+    <!-- Google Fonts with display=swap for better LCP -->
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
+    
+    <!-- Critical CSS inline -->
+    <style>
+      /* Critical above-the-fold styles */
+      .hero-section {
+        position: relative;
+        height: 85vh;
+        min-height: 600px;
+      }
+      
+      .hero-bg {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background-size: cover;
+        background-position: center;
+        background-repeat: no-repeat;
+        will-change: transform;
+      }
+      
+      .container-custom {
+        max-width: 1200px;
+        margin: 0 auto;
+        padding: 0 1rem;
+      }
+      
+      /* Prevent layout shift */
+      img {
+        max-width: 100%;
+        height: auto;
+      }
+    </style>
   </head>
   
   <body class="antialiased">
